@@ -7,5 +7,7 @@
   <p>Price: {{ book.price }}</p>
   <p>Introduction: {{ book.introduction | linebreaksbr }}</p>
 
-  <a href="{% url 'books-index' %}" class="btn btn-primary"><< Back</a>
+  <a href="{% url 'books:index' %}" class="btn btn-primary"><< Back</a>
+  <a href="{% url 'books:edit' book.id %}" class="btn btn-info">Edit</a>
+  <a href="{% url 'books:delete' book.id %}" class="btn btn-danger">Delete</a>
 {% endblock %}
